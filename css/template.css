@@ -1,0 +1,212 @@
+/* Cultural Exploration Theme - Base styles */
+:root {
+    /* Color palette inspired by African textiles and European architecture */
+    --primary-dark: #2C3E50;    /* Deep blue-gray from European stonework */
+    --accent-warm: #D35400;     /* Warm orange from African sunset */
+    --accent-earth: #8D4E31;    /* Rich terracotta */
+    --neutral-light: #F5E6D3;   /* Warm cream */
+    --text-dark: #2C3E50;       /* Deep blue-gray for text */
+    --text-light: #ECF0F1;      /* Light gray for contrast text */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    background-color: var(--neutral-light);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-dark);
+}
+
+/* Content wrapper with cultural border pattern */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 2px solid var(--accent-warm);
+    position: relative;
+}
+
+/* Header image styling */
+.header-image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.4));
+}
+
+/* Cultural-inspired headings */
+.main-heading {
+    color: var(--primary-dark);
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.main-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-warm);
+}
+
+.page-heading {
+    color: var(--accent-earth);
+    font-size: 2em;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--accent-earth);
+    font-family: 'Playfair Display', serif;
+}
+
+.content-area {
+    padding: 20px 0;
+    line-height: 1.8;
+}
+
+/* Enhanced Navigation Styles */
+.main-nav {
+    background-color: var(--primary-dark);
+    margin: -30px -30px 30px -30px;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: block;
+    white-space: nowrap;
+}
+
+/* First level hover effect */
+.nav-list > li > a:hover {
+    background-color: var(--accent-warm);
+    color: white;
+}
+
+/* Submenu styling - Level 1 */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-dark);
+    min-width: 200px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 10px 0;
+}
+
+/* Submenu styling - Level 2 */
+.submenu-l2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--primary-dark);
+    min-width: 200px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+    padding: 10px 0;
+}
+
+/* Hover effects for submenu items */
+.submenu a:hover,
+.submenu-l2 a:hover {
+    background-color: var(--accent-warm);
+    padding-left: 25px;
+}
+
+/* Arrows for items with submenus */
+.has-submenu > a::after {
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+.has-submenu-l2 > a::after {
+    content: '▶';
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .submenu, .submenu-l2 {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 4px;
+    }
+
+    .content-wrapper {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .main-heading {
+        font-size: 2em;
+    }
+
+    .page-heading {
+        font-size: 1.5em;
+    }
+}
