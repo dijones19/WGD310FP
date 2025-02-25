@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globetrotting in America, Europe & Africa</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Header image section -->
+        <div class="header-image">
+            <img src="images/capetown.jpg" alt="Cultural Exploration Header - Europe and Africa">
+        </div>
+        
+        <!-- Enhanced Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                
+                <li class="has-submenu">
+                    <a href="london.html">London</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#entertainment">Entertainment</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#shows">West End Shows</a></li>
+                                <li><a href="#theatre">Theatre District</a></li>
+                                <li><a href="#harry-potter">Harry Potter</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#accommodations">Accommodations</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#hard-rock">Hard Rock Hotel</a></li>
+                                <li><a href="#luxury">Luxury Hotels</a></li>
+                                <li><a href="#budget">Budget Stays</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Transportation</a></li>
+                        <li><a href="#guides">City Guides</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-submenu">
+                    <a href="southafrica.html">South Africa</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#attractions">Attractions</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#table-mountain">Table Mountain</a></li>
+                                <li><a href="#cape-point">Cape Point</a></li>
+                                <li><a href="#beaches">Beaches</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#city-life">City Life</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#waterfront">V&A Waterfront</a></li>
+                                <li><a href="#markets">Local Markets</a></li>
+                                <li><a href="#restaurants">Dining</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Getting Around</a></li>
+                        <li><a href="#guides">Travel Tips</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main heading -->
+        <h1 class="main-heading">Dion's World Travels</h1>
+        <h2 class="page-heading">Going everywhere, one plane ride at a time</h2>
+
+        <!-- Featured Destinations -->
+        <div class="destinations-container">
+            <h3>Featured Destinations</h3>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <h4>London</h4>
+                    <div class="destination-details">
+                        <p>Experience the rich history and modern culture of England's capital.</p>
+                        <div class="weather-widget">
+                            Click for London Weather
+                            <div class="weather-details">64°F | Partly Cloudy</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <h4>Cape Town</h4>
+                    <div class="destination-details">
+                        <p>Discover the most vibrant landscape I've ever seen - South Africa.</p>
+                        <div class="weather-widget">
+                            Click for Cape Town Weather
+                            <div class="weather-details">77°F | Sunny</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery Preview -->
+        <div class="gallery-container">
+            <h3>Travel Highlights</h3>
+            <div class="gallery-wrapper">
+                <button class="gallery-prev">Previous</button>
+                <div class="gallery-photos">
+                    <div class="gallery-photo">
+                        <img src="images/IMG_Hard.JPG" alt="Hard Rock Hotel London">
+                        <span class="photo-caption">Hard Rock Hotel London</span>
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="images/IMG_CapeChurch.JPG" alt="Cape Town Sunset">
+                        <span class="photo-caption">Cape Town Sunset</span>
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="images/IMG_Harry.JPG" alt="Harry Potter in the West End">
+                        <span class="photo-caption">Harry Potter in the West End</span>
+                    </div>
+                </div>
+                <button class="gallery-next">Next</button>
+            </div>
+        </div>
+
+        <!-- Travel Tips -->
+        <div class="tips-container">
+            <h3>Travel Tips</h3>
+            <div class="tip-cards">
+                <div class="tip-card">
+                    <h4>Packing Essentials</h4>
+                    <ul class="tip-list">
+                        <li>Universal power adapter</li>
+                        <li>Your most comfortable shoes</li>
+                        <li>Weather-appropriate clothing</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h4>Local Transportation</h4>
+                    <ul class="tip-list">
+                        <li>Get an Oyster card in London</li>
+                        <li>Uber in Cape Town</li>
+                        <li>Take the Train and Mind the Gap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Script -->
+    <script>
+        $(document).ready(function() {
+            // Navigation menu handling
+            const $hasSubmenu = $('.has-submenu');
+            const $hasSubmenuL2 = $('.has-submenu-l2');
+            
+            function closeAllMenus() {
+                $('.submenu, .submenu-l2').slideUp(300);
+                $hasSubmenu.removeClass('active');
+                $hasSubmenuL2.removeClass('active');
+            }
+            
+            $hasSubmenu.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu');
+                    
+                    $hasSubmenu.not($this).removeClass('active');
+                    $('.submenu').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            $hasSubmenuL2.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu-l2');
+                    
+                    $hasSubmenuL2.not($this).removeClass('active');
+                    $('.submenu-l2').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu-l2').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            $(document).click(function(e) {
+                if (!$(e.target).closest('.nav-list').length) {
+                    closeAllMenus();
+                }
+            });
+
+            // Initialize all content as hidden
+            $('.destination-details, .tip-card, .weather-details').hide();
+            
+            // Fade in tip cards sequentially
+            $('.tip-card').each(function(index) {
+                $(this).delay(200 * index).fadeIn(800);
+            });
+
+            // Destination cards hover effect
+            $('.destination-card').hover(
+                function() {
+                    $(this).addClass('card-hover');
+                },
+                function() {
+                    $(this).removeClass('card-hover');
+                }
+            );
+
+            // Toggle destination details
+            $('.destination-card').click(function() {
+                $(this).find('.destination-details').slideToggle(600);
+            });
+
+            // Weather widget interaction
+            $('.weather-widget').click(function() {
+                $(this).toggleClass('expanded');
+                $(this).find('.weather-details').slideToggle(300);
+            });
+
+            // Photo gallery navigation
+            let currentPhoto = 0;
+            const photos = $('.gallery-photo');
+            
+            $('.gallery-next').click(function() {
+                $(photos[currentPhoto]).fadeOut();
+                currentPhoto = (currentPhoto + 1) % photos.length;
+                $(photos[currentPhoto]).fadeIn();
+            });
+
+            $('.gallery-prev').click(function() {
+                $(photos[currentPhoto]).fadeOut();
+                currentPhoto = (currentPhoto - 1 + photos.length) % photos.length;
+                $(photos[currentPhoto]).fadeIn();
+            });
+        });
+    </script>
+</body>
+</html>

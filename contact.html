@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dion's World Travels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Header image section -->
+        <div class="header-image">
+            <img src="images/capetown.jpg" alt="Travel Header Image">
+        </div>
+        
+        <!-- Enhanced Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                
+                <li class="has-submenu">
+                    <a href="london.html">London</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#entertainment">Entertainment</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#shows">West End Shows</a></li>
+                                <li><a href="#theatre">Theatre District</a></li>
+                                <li><a href="#harry-potter">Harry Potter</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#accommodations">Accommodations</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#hard-rock">Hard Rock Hotel</a></li>
+                                <li><a href="#luxury">Luxury Hotels</a></li>
+                                <li><a href="#budget">Budget Stays</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Transportation</a></li>
+                        <li><a href="#guides">City Guides</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-submenu">
+                    <a href="southafrica.html">South Africa</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#attractions">Attractions</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#table-mountain">Table Mountain</a></li>
+                                <li><a href="#cape-point">Cape Point</a></li>
+                                <li><a href="#beaches">Beaches</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#city-life">City Life</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#waterfront">V&A Waterfront</a></li>
+                                <li><a href="#markets">Local Markets</a></li>
+                                <li><a href="#restaurants">Dining</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Getting Around</a></li>
+                        <li><a href="#guides">Travel Tips</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="main-heading">Contact Me!</h1>
+        <h2 class="page-heading">Ask about my travels!</h2>
+
+        <div class="content-area">
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="123-456-7890">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Contact Method:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="contactMethod" value="email" checked> Email
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="contactMethod" value="phone"> Phone
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5"></textarea>
+                    <div class="error-message" id="message-error"></div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Form Validation and Navigation Scripts -->
+    <script>
+        $(document).ready(function() {
+            // Validation rules object literal
+            const validationRules = {
+                name: {
+                    required: true,
+                    pattern: /^[a-zA-Z\s]{2,}$/,
+                    message: {
+                        required: "Please enter your name",
+                        pattern: "Name must contain only letters and be at least 2 characters long"
+                    }
+                },
+                email: {
+                    required: true,
+                    pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+                    message: {
+                        required: "Please enter your email address",
+                        pattern: "Please enter a valid email address"
+                    }
+                },
+                phone: {
+                    required: true,
+                    pattern: /^\d{3}-?\d{3}-?\d{4}$/,
+                    message: {
+                        required: "Please enter your phone number",
+                        pattern: "Please enter a valid phone number (e.g., 123-456-7890)"
+                    }
+                },
+                message: {
+                    required: true,
+                    minLength: 10,
+                    message: {
+                        required: "Please enter your message",
+                        minLength: "Message must be at least 10 characters long"
+                    }
+                }
+            };
+
+            // Form handling object literal
+            const formHandler = {
+                validateField: function(fieldName, value) {
+                    const rules = validationRules[fieldName];
+                    const errors = [];
+
+                    if (rules.required && !value.trim()) {
+                        errors.push(rules.message.required);
+                        return errors;
+                    }
+
+                    if (rules.pattern && !rules.pattern.test(value)) {
+                        errors.push(rules.message.pattern);
+                    }
+
+                    if (rules.minLength && value.length < rules.minLength) {
+                        errors.push(rules.message.minLength);
+                    }
+
+                    return errors;
+                },
+
+                showError: function(fieldName, errors) {
+                    const errorDiv = $(`#${fieldName}-error`);
+                    const field = $(`#${fieldName}`);
+
+                    if (errors.length > 0) {
+                        errorDiv.html(errors.join('<br>'));
+                        errorDiv.show();
+                        field.addClass('error');
+                        field.css('animation', 'shake 0.5s');
+                        setTimeout(() => field.css('animation', ''), 500);
+                    } else {
+                        errorDiv.hide();
+                        field.removeClass('error');
+                        field.addClass('valid');
+                    }
+                },
+
+                validateForm: function() {
+                    let isValid = true;
+                    
+                    Object.keys(validationRules).forEach(fieldName => {
+                        const field = $(`#${fieldName}`);
+                        const errors = this.validateField(fieldName, field.val());
+                        
+                        this.showError(fieldName, errors);
+                        if (errors.length > 0) {
+                            isValid = false;
+                        }
+                    });
+                    
+                    return isValid;
+                }
+            };
+
+            // Real-time validation
+            $('#contactForm input, #contactForm textarea').on('input', function() {
+                const fieldName = $(this).attr('id');
+                const errors = formHandler.validateField(fieldName, $(this).val());
+                formHandler.showError(fieldName, errors);
+            });
+
+            // Form submission
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                if (formHandler.validateForm()) {
+                    const successMessage = $('<div class="success-message">Form submitted successfully!</div>');
+                    $(this).append(successMessage);
+                    successMessage.fadeIn();
+
+                    setTimeout(() => {
+                        $(this)[0].reset();
+                        $('.form-control').removeClass('valid error');
+                        successMessage.fadeOut(function() {
+                            $(this).remove();
+                        });
+                    }, 3000);
+                }
+            });
+
+            // Reset button handler
+            $('button[type="reset"]').click(function() {
+                $('.error-message').hide();
+                $('.form-control').removeClass('error valid');
+                $('.success-message').remove();
+            });
+
+            // Navigation menu handling
+            const $hasSubmenu = $('.has-submenu');
+            const $hasSubmenuL2 = $('.has-submenu-l2');
+            
+            function closeAllMenus() {
+                $('.submenu, .submenu-l2').slideUp(300);
+                $hasSubmenu.removeClass('active');
+                $hasSubmenuL2.removeClass('active');
+            }
+            
+            $hasSubmenu.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu');
+                    
+                    $hasSubmenu.not($this).removeClass('active');
+                    $('.submenu').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            $hasSubmenuL2.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu-l2');
+                    
+                    $hasSubmenuL2.not($this).removeClass('active');
+                    $('.submenu-l2').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu-l2').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            $(document).click(function(e) {
+                if (!$(e.target).closest('.nav-list').length) {
+                    closeAllMenus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

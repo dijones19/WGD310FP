@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dion's World Travels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Header image section -->
+        <div class="header-image">
+            <img src="images/capetown.jpg" alt="Cultural Exploration Header">
+        </div>
+        
+        <!-- Enhanced Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                
+                <li class="has-submenu">
+                    <a href="london.html">London</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#entertainment">Entertainment</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#shows">West End Shows</a></li>
+                                <li><a href="#theatre">Theatre District</a></li>
+                                <li><a href="#harry-potter">Harry Potter</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#accommodations">Accommodations</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#hard-rock">Hard Rock Hotel</a></li>
+                                <li><a href="#luxury">Luxury Hotels</a></li>
+                                <li><a href="#budget">Budget Stays</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Transportation</a></li>
+                        <li><a href="#guides">City Guides</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-submenu">
+                    <a href="southafrica.html">South Africa</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#attractions">Attractions</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#table-mountain">Table Mountain</a></li>
+                                <li><a href="#cape-point">Cape Point</a></li>
+                                <li><a href="#beaches">Beaches</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#city-life">City Life</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#waterfront">V&A Waterfront</a></li>
+                                <li><a href="#markets">Local Markets</a></li>
+                                <li><a href="#restaurants">Dining</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Getting Around</a></li>
+                        <li><a href="#guides">Travel Tips</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="main-heading">About Dion's World Travels</h1>
+        <h2 class="page-heading">Exploring the World One Adventure at a Time</h2>
+
+        <div class="content-area">
+            <section class="about-section">
+                <h3>Our Journey</h3>
+                <p>Welcome to Dion's World Travels! This blog documents my adventures across continents, with a special focus on the vibrant cities of London and Cape Town. Through my travels, I aim to share authentic experiences, cultural insights, and practical tips for fellow travelers.</p>
+            </section>
+
+            <section class="about-section">
+                <h3>Travel Philosophy</h3>
+                <p>I'm an only child and could never get my friends to travel.  SO... I started traveling on my own. I want to go everywhere but my wallet is a restriction. </p>
+            </section>
+
+            <section class="about-section">
+                <h3>Featured Destinations</h3>
+                <div class="destinations-highlight">
+                    <div class="destination-item">
+                        <h4>London, UK</h4>
+                        <p>I loved London, I went with my momm and explored the city and saw a broadway show in the West End.  I also stated at the Hard Rock Hotel. The last residence of the icon Jimmy Hendrix.</p>
+                    </div>
+                    <div class="destination-item">
+                        <h4>Cape Town, South Africa</h4>
+                        <p>I always wanted to go Africa and Capetown and Joburg were amazing.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Navigation Script -->
+    <script>
+        $(document).ready(function() {
+            // Cache DOM elements
+            const $hasSubmenu = $('.has-submenu');
+            const $hasSubmenuL2 = $('.has-submenu-l2');
+            
+            // Function to close all menus
+            function closeAllMenus() {
+                $('.submenu, .submenu-l2').slideUp(300);
+                $hasSubmenu.removeClass('active');
+                $hasSubmenuL2.removeClass('active');
+            }
+            
+            // First level menu handling
+            $hasSubmenu.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu');
+                    
+                    $hasSubmenu.not($this).removeClass('active');
+                    $('.submenu').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            // Second level menu handling
+            $hasSubmenuL2.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu-l2');
+                    
+                    $hasSubmenuL2.not($this).removeClass('active');
+                    $('.submenu-l2').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu-l2').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            // Close menus when clicking outside
+            $(document).click(function(e) {
+                if (!$(e.target).closest('.nav-list').length) {
+                    closeAllMenus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

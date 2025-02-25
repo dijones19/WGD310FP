@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website Documentation - Interactive Elements and Theme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Header image section -->
+        <div class="header-image">
+            <img src="images/capetown.jpg" alt="Site Theme Header">
+        </div>
+        
+        <!-- Enhanced Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                
+                <li class="has-submenu">
+                    <a href="london.html">London</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#entertainment">Entertainment</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#shows">West End Shows</a></li>
+                                <li><a href="#theatre">Theatre District</a></li>
+                                <li><a href="#harry-potter">Harry Potter</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#accommodations">Accommodations</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#hard-rock">Hard Rock Hotel</a></li>
+                                <li><a href="#luxury">Luxury Hotels</a></li>
+                                <li><a href="#budget">Budget Stays</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Transportation</a></li>
+                        <li><a href="#guides">City Guides</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-submenu">
+                    <a href="southafrica.html">South Africa</a>
+                    <ul class="submenu">
+                        <li class="has-submenu-l2">
+                            <a href="#attractions">Attractions</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#table-mountain">Table Mountain</a></li>
+                                <li><a href="#cape-point">Cape Point</a></li>
+                                <li><a href="#beaches">Beaches</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu-l2">
+                            <a href="#city-life">City Life</a>
+                            <ul class="submenu-l2">
+                                <li><a href="#waterfront">V&A Waterfront</a></li>
+                                <li><a href="#markets">Local Markets</a></li>
+                                <li><a href="#restaurants">Dining</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#transport">Getting Around</a></li>
+                        <li><a href="#guides">Travel Tips</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="main-heading">Website Documentation</h1>
+        <h2 class="page-heading">Interactive Elements and Theme Overview</h2>
+
+        <div class="content-area">
+            <!-- Theme Section -->
+            <section class="doc-section">
+                <h3>Website Theme</h3>
+                <div class="theme-explanation">
+                    <p>This travel website showcases destinations in London and Cape Town, featuring colors drawn from my high school colors, blue and orange.</p>
+                    <ul class="theme-colors">
+                        <li>Deep blue-gray (--primary-dark): Inspired by European stonework, shown on the hard rock hotel picture</li>
+                        <li>Warm orange (--accent-warm): Drawn from African sunsets, like my Capetown picture</li>
+                        <li>Rich terracotta (--accent-earth): Reflecting cultural heritage</li>
+                        <li>Warm cream (--neutral-light): Providing balance and readability</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Interactive Elements Section -->
+            <section class="doc-section">
+                <h3>Interactive Elements</h3>
+                
+                <div class="interactive-element">
+                    <h4>1. Multi-Level Navigation Menu</h4>
+                    <p>The navigation bar features a three-level deep dropdown system:</p>
+                    <ul>
+                        <li>Hover interactions reveal submenus</li>
+                        <li>Smooth slide animations for menu transitions</li>
+                        <li>Mobile-responsive collapse functionality</li>
+                        <li>Interactive arrows indicating submenu presence</li>
+                        <li>Location: Present on all pages in the header section</li>
+                    </ul>
+                </div>
+
+                <div class="interactive-element">
+                    <h4>2. Image Gallery with Overlay</h4>
+                    <p>The photo gallery implementation includes:</p>
+                    <ul>
+                        <li>Thumbnail grid with hover effects</li>
+                        <li>Full-screen overlay for image viewing</li>
+                        <li>Navigation controls for cycling through images</li>
+                        <li>Keyboard support (arrows and escape)</li>
+                        <li>Responsive sizing for all screen types</li>
+                        <li>Location: gallery.html and destination pages</li>
+                    </ul>
+                </div>
+
+                <div class="interactive-element">
+                    <h4>3. Contact Form with Validation</h4>
+                    <p>The contact form features comprehensive jQuery validation:</p>
+                    <ul>
+                        <li>Real-time input validation</li>
+                        <li>Custom error messages and animations</li>
+                        <li>Pattern matching for email and phone</li>
+                        <li>Required field validation</li>
+                        <li>Success/error state management</li>
+                        <li>Location: contact.html</li>
+                    </ul>
+                </div>
+
+                <div class="interactive-element">
+                    <h4>4. Weather Widgets</h4>
+                    <p>Interactive weather information displays:</p>
+                    <ul>
+                        <li>Click-to-expand functionality</li>
+                        <li>Smooth transition animations</li>
+                        <li>Location-specific weather data</li>
+                        <li>Location: Destination pages</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Implementation Process -->
+            <section class="doc-section">
+                <h3>Development Process</h3>
+                <div class="process-explanation">
+                    <h4>1. Structure and Planning</h4>
+                    <p>The website was developed following these steps:</p>
+                    <ul>
+                        <li>Created base HTML structure for all pages</li>
+                        <li>Implemented responsive CSS layout</li>
+                        <li>Developed navigation system</li>
+                        <li>Added interactive elements with jQuery</li>
+                        <li>Implemented form validation</li>
+                        <li>Optimized for mobile devices</li>
+                    </ul>
+
+                    <h4>2. File Organization</h4>
+                    <p>The project maintains a clear file structure:</p>
+                    <ul>
+                        <li>HTML files in root directory</li>
+                        <li>CSS files organized by function (template, interactive, contact)</li>
+                        <li>Images in dedicated folder</li>
+                        <li>jQuery loaded from CDN</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Technical Details -->
+            <section class="doc-section">
+                <h3>Technical Implementation</h3>
+                <div class="tech-details">
+                    <h4>Technologies Used:</h4>
+                    <ul>
+                        <li>HTML5 for structure</li>
+                        <li>CSS3 for styling and animations</li>
+                        <li>jQuery for interactivity</li>
+                        <li>Google Fonts for typography</li>
+                        <li>Responsive design principles</li>
+                    </ul>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Mobile-first responsive design</li>
+                        <li>Cross-browser compatibility</li>
+                        <li>Accessible navigation</li>
+                        <li>Progressive enhancement</li>
+                        <li>Optimized performance</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Navigation Script -->
+    <script>
+        $(document).ready(function() {
+            const $hasSubmenu = $('.has-submenu');
+            const $hasSubmenuL2 = $('.has-submenu-l2');
+            
+            function closeAllMenus() {
+                $('.submenu, .submenu-l2').slideUp(300);
+                $hasSubmenu.removeClass('active');
+                $hasSubmenuL2.removeClass('active');
+            }
+            
+            $hasSubmenu.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu');
+                    
+                    $hasSubmenu.not($this).removeClass('active');
+                    $('.submenu').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            $hasSubmenuL2.hover(
+                function() {
+                    const $this = $(this);
+                    const $thisSubmenu = $this.find('> .submenu-l2');
+                    
+                    $hasSubmenuL2.not($this).removeClass('active');
+                    $('.submenu-l2').not($thisSubmenu).slideUp(300);
+                    
+                    $this.addClass('active');
+                    $thisSubmenu.slideDown(300);
+                },
+                function() {
+                    const $this = $(this);
+                    setTimeout(function() {
+                        if (!$this.is(':hover')) {
+                            $this.removeClass('active');
+                            $this.find('.submenu-l2').slideUp(300);
+                        }
+                    }, 200);
+                }
+            );
+            
+            $(document).click(function(e) {
+                if (!$(e.target).closest('.nav-list').length) {
+                    closeAllMenus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
